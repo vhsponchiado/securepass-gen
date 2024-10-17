@@ -40,7 +40,7 @@ h1 {
   border: 1px solid #ddd;
   padding-right: 40px;
   outline: none;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .copy-btn {
@@ -73,7 +73,7 @@ h1 {
 }
 
 .copied {
-  color: #30c65d; 
+  color: #30c65d;
 }
 
 #charCount {
@@ -137,6 +137,22 @@ input:checked + .slider::before {
   transform: translateX(26px);
 }
 
+.slider:hover::before {
+  transform: scale(1.1) translateX(0);
+}
+
+.slider:active::before {
+  transform: scale(0.9) translateX(0);
+}
+
+input:checked + .slider:active::before {
+  transform: scale(0.9) translateX(26px);
+}
+
+input:checked + .slider:hover::before {
+  transform: scale(1.1) translateX(26px);
+}
+
 @keyframes pulse {
   0% {
     box-shadow: 0 0 10px rgba(145, 124, 251, 0.5);
@@ -171,7 +187,6 @@ input:checked + .slider::before {
   background-image: linear-gradient(to right, #5c47b9, #917cfb);
 }
 
-
 input[type="range"] {
   -webkit-appearance: none;
   width: 100%;
@@ -204,4 +219,3 @@ input[type="range"]::-webkit-slider-thumb:hover {
   background: #7a5bc7;
   transform: scale(1.1);
 }
-
