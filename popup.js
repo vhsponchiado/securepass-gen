@@ -44,7 +44,6 @@ function generatePassword() {
 copyPasswordButton.addEventListener('click', () => {
   passwordField.select();
   document.execCommand('copy');
-  alert('Password copied to clipboard');
 });
 
 // Regenerate password
