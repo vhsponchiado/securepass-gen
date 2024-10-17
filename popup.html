@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Password Generator</h1>
+
+      <div class="password-container">
+        <input type="text" id="password" readonly />
+        <button id="copyPassword" class="copy-btn"><i class="fas fa-copy"></i></button>
+      </div>
+
+      <label for="charCount">Length: <span id="charCountValue">8</span></label>
+      <input type="range" id="charCount" min="4" max="64" value="8" />
+
+      <label>Settings</label>
+      <div class="options">
+        <label class="switch">
+          <input type="checkbox" id="uppercase" />
+          <span class="slider"></span>
+          Uppercase Letters
+        </label>
+        <label class="switch">
+          <input type="checkbox" id="lowercase" checked />
+          <span class="slider"></span>
+          Lowercase Letters
+        </label>
+        <label class="switch">
+          <input type="checkbox" id="numbers" />
+          <span class="slider"></span>
+          Numbers
+        </label>
+        <label class="switch">
+          <input type="checkbox" id="symbols" />
+          <span class="slider"></span>
+          Symbols
+        </label>
+      </div>
+
+      <button id="generatePassword" class="generate-btn">Generate</button>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
