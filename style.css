@@ -65,11 +65,15 @@ h1 {
 
 .copy-btn i {
   font-size: 1.2rem;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, color 0.3s ease;
 }
 
 .copy-btn:active i {
   transform: rotate(360deg);
+}
+
+.copied {
+  color: #30c65d; 
 }
 
 #charCount {
@@ -167,6 +171,7 @@ input:checked + .slider::before {
   background-image: linear-gradient(to right, #5c47b9, #917cfb);
 }
 
+
 input[type="range"] {
   -webkit-appearance: none;
   width: 100%;
@@ -199,3 +204,4 @@ input[type="range"]::-webkit-slider-thumb:hover {
   background: #7a5bc7;
   transform: scale(1.1);
 }
+
