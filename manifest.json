@@ -1,11 +1,13 @@
 {
-    "manifest_version": 3,
-    "name": "Password Generator",
-    "version": "1.0",
-    "description": "Generate secure passwords with custom options.",
-    "action": {
-      "default_popup": "popup.html"
-    },
-    "permissions": ["clipboardWrite"]
-  }
-  
+  "manifest_version": 3,
+  "name": "Gerador de Senhas",
+  "version": "1.0.0",
+  "description": "Gere senhas seguras personalizadas de forma rápida e prática.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "assets/icon48.png"
+  },
+  "permissions": ["clipboardWrite"]
+}

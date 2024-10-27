@@ -40,15 +40,19 @@ function generatePassword() {
   passwordField.value = password;
 }
 
-// Copy password to clipboard
+
 copyPasswordButton.addEventListener('click', () => {
   passwordField.select();
   document.execCommand('copy');
-  alert('Password copied to clipboard');
+  
+  copyPasswordButton.classList.add('copied');
+
+  setTimeout(() => {
+    copyPasswordButton.classList.remove('copied');
+  }, 1500);
 });
 
-// Regenerate password
 generatePasswordButton.addEventListener('click', generatePassword);
 
-// Initialize with first password
+
 generatePassword();

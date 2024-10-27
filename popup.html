@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Password Generator</title>
+    <title>Gerador de Senha</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,41 +18,40 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="title">Password Generator</h1>
+      <h1 class="title">Gerador de Senha</h1>
 
       <div class="password-container">
         <input type="text" id="password" readonly />
         <button id="copyPassword" class="copy-btn"><i class="fas fa-copy"></i></button>
       </div>
 
-      <label for="charCount">Length: <span id="charCountValue">8</span></label>
-      <input type="range" id="charCount" min="4" max="64" value="8" />
+      <label for="charCount">Tamanho: <span id="charCountValue">16</span></label>
+      <input type="range" id="charCount" min="6" max="64" value="16" />
 
-      <label>Settings</label>
       <div class="options">
         <label class="switch">
-          <input type="checkbox" id="uppercase" />
+          <input type="checkbox" id="uppercase" checked />
           <span class="slider"></span>
-          Uppercase Letters
+          Letras maísculas
         </label>
         <label class="switch">
           <input type="checkbox" id="lowercase" checked />
           <span class="slider"></span>
-          Lowercase Letters
+          Letras minúsculas
         </label>
         <label class="switch">
-          <input type="checkbox" id="numbers" />
+          <input type="checkbox" id="numbers"  checked/>
           <span class="slider"></span>
-          Numbers
+          Números
         </label>
         <label class="switch">
-          <input type="checkbox" id="symbols" />
+          <input type="checkbox" id="symbols" checked />
           <span class="slider"></span>
-          Symbols
+          Símbolos
         </label>
       </div>
 
-      <button id="generatePassword" class="generate-btn">Generate</button>
+      <button id="generatePassword" class="generate-btn">Gerar Senha</button>
     </div>
 
     <script src="popup.js"></script>
